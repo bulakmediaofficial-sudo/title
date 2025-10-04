@@ -46,57 +46,107 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="relative py-20 md:py-32 bg-gradient-to-r from-blue-600 to-blue-700 text-white overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+      <section className="relative py-20 md:py-32 overflow-hidden bg-hero-waste">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 via-blue-800/90 to-blue-900/85"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="max-w-2xl">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              <div className="inline-block mb-4 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+                <span className="text-white text-sm font-medium">🚛 Работаем с 2015 года</span>
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-lg">
                 Вывоз мусора в Санкт-Петербурге
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100">
+              
+              <p className="text-xl md:text-2xl mb-8 text-blue-50 drop-shadow">
                 Профессиональный вывоз строительного, бытового и офисного мусора. Собственный автопарк из 35 машин.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+              
+              <div className="flex flex-wrap gap-4 mb-8">
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 shadow-xl hover:shadow-2xl transition-all">
                   <Calculator className="mr-2 h-5 w-5" />
                   Рассчитать стоимость
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button size="lg" className="bg-green-500 text-white hover:bg-green-600 shadow-xl hover:shadow-2xl transition-all border-0">
                   <Phone className="mr-2 h-5 w-5" />
                   Позвонить сейчас
                 </Button>
               </div>
+              
+              <div className="grid grid-cols-3 gap-4 pt-6 border-t border-white/20">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white mb-1">35+</div>
+                  <div className="text-sm text-blue-100">Машин</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white mb-1">6-36</div>
+                  <div className="text-sm text-blue-100">Объем м³</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white mb-1">24/7</div>
+                  <div className="text-sm text-blue-100">Поддержка</div>
+                </div>
+              </div>
             </div>
+            
             <div className="relative hidden md:block">
               <div className="grid grid-cols-2 gap-4">
-                <img
-                  src="https://images.pexels.com/photos/6252434/pexels-photo-6252434.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="Контейнер ПУХТО для строительного мусора"
-                  className="rounded-lg shadow-2xl w-full h-48 object-cover"
-                />
-                <img
-                  src="https://images.pexels.com/photos/3846508/pexels-photo-3846508.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="Вывоз мусора"
-                  className="rounded-lg shadow-2xl w-full h-48 object-cover mt-8"
-                />
-                <img
-                  src="https://images.pexels.com/photos/4065891/pexels-photo-4065891.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="Контейнер для мусора"
-                  className="rounded-lg shadow-2xl w-full h-48 object-cover"
-                />
-                <img
-                  src="https://images.pexels.com/photos/2764947/pexels-photo-2764947.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="Грузовик для вывоза мусора"
-                  className="rounded-lg shadow-2xl w-full h-48 object-cover mt-8"
-                />
+                <div className="space-y-4">
+                  <div className="relative group">
+                    <img
+                      src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80"
+                      alt="Контейнер ПУХТО для строительного мусора"
+                      className="rounded-xl shadow-2xl w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300 ring-2 ring-white/20"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
+                    <div className="absolute bottom-3 left-3 text-white font-semibold text-sm">Контейнер ПУХТО</div>
+                  </div>
+                  <div className="relative group">
+                    <img
+                      src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?w=600&q=80"
+                      alt="Контейнер для мусора"
+                      className="rounded-xl shadow-2xl w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300 ring-2 ring-white/20"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
+                    <div className="absolute bottom-3 left-3 text-white font-semibold text-sm">Разные объемы</div>
+                  </div>
+                </div>
+                
+                <div className="space-y-4 mt-8">
+                  <div className="relative group">
+                    <img
+                      src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&q=80"
+                      alt="Вывоз мусора"
+                      className="rounded-xl shadow-2xl w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300 ring-2 ring-white/20"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
+                    <div className="absolute bottom-3 left-3 text-white font-semibold text-sm">Быстрая подача</div>
+                  </div>
+                  <div className="relative group">
+                    <img
+                      src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?w=600&q=80"
+                      alt="Грузовик для вывоза мусора"
+                      className="rounded-xl shadow-2xl w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300 ring-2 ring-white/20"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
+                    <div className="absolute bottom-3 left-3 text-white font-semibold text-sm">Собственный парк</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+        
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent z-10"></div>
+        
+        {/* Декоративные элементы */}
+        <div className="absolute top-20 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div className="absolute bottom-20 left-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-container-pattern-light">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
@@ -114,7 +164,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-container-pattern-gray">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Наши услуги</h2>
@@ -128,42 +178,42 @@ export default function Home() {
                 title: 'Строительный мусор',
                 description: 'Вывоз строительных отходов, бетона, кирпича, штукатурки после ремонта или демонтажа',
                 features: ['Контейнеры 6-36 м³', 'Быстрая подача', 'Помощь в загрузке'],
-                image: 'https://images.pexels.com/photos/6252434/pexels-photo-6252434.jpeg?auto=compress&cs=tinysrgb&w=400'
+                image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&q=80'
               },
               {
                 icon: HomeIcon,
                 title: 'Бытовой мусор',
                 description: 'Вывоз бытовых отходов из квартир, домов, дач и садовых участков',
                 features: ['Мебель и техника', 'Вывоз хлама', 'Уборка территории'],
-                image: 'https://images.pexels.com/photos/3846508/pexels-photo-3846508.jpeg?auto=compress&cs=tinysrgb&w=400'
+                image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=400&q=80'
               },
               {
                 icon: Package,
                 title: 'Офисный мусор',
                 description: 'Вывоз офисных отходов, мебели, оргтехники и архивов',
                 features: ['Переезд офиса', 'Утилизация документов', 'Регулярный вывоз'],
-                image: 'https://images.pexels.com/photos/4065891/pexels-photo-4065891.jpeg?auto=compress&cs=tinysrgb&w=400'
+                image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=80'
               },
               {
                 icon: Container,
                 title: 'Аренда контейнеров ПУХТО',
                 description: 'Предоставление контейнеров ПУХТО различного объема для сбора отходов',
                 features: ['От 6 до 36 м³', 'Гибкие сроки', 'Доставка и вывоз'],
-                image: 'https://images.pexels.com/photos/7256042/pexels-photo-7256042.jpeg?auto=compress&cs=tinysrgb&w=400'
+                image: 'https://images.unsplash.com/photo-1621451537084-482c73073a0f?w=400&q=80'
               },
               {
                 icon: Trash2,
                 title: 'Вывоз на утилизацию',
                 description: 'Легальная утилизация всех видов отходов с предоставлением документов',
                 features: ['Экологичность', 'Документы', 'Сертификаты'],
-                image: 'https://images.pexels.com/photos/2764947/pexels-photo-2764947.jpeg?auto=compress&cs=tinysrgb&w=400'
+                image: 'https://images.unsplash.com/photo-1604187351574-c75ca79f5807?w=400&q=80'
               },
               {
                 icon: Truck,
                 title: 'Транспортировка',
                 description: 'Транспортировка грузов самосвалами и бортовыми машинами',
                 features: ['Любые районы', 'Быстрая подача', 'Опытные водители'],
-                image: 'https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=400'
+                image: 'https://images.unsplash.com/photo-1580674285054-bed31e145f59?w=400&q=80'
               }
             ].map((service, index) => (
               <Card key={index} className="hover:shadow-lg transition border-t-4 border-t-blue-600 overflow-hidden">
@@ -197,7 +247,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-truck-pattern">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
@@ -259,7 +309,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-container-pattern-gray">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Наши преимущества</h2>
@@ -301,7 +351,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-container-pattern-light">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Отзывы клиентов</h2>
